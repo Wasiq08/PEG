@@ -23,7 +23,7 @@ const DashboardComponent = () => {
                     <div className="col-md-6 col-sm-12 p-0">
                         <div className="card mx-0" >
                             <Link to="/registration">
-                                <img className="card-img-top" src={card1} alt="Card image cap" />
+                                <img className="card-img-top" src={card1} alt="Card cap" />
                             </Link>
                             <div className="card-body">
                                 <h5 className="card-title">Eligibility Criteria</h5>
@@ -35,7 +35,7 @@ const DashboardComponent = () => {
                     <div className="col-md-6 col-sm-12 p-0">
                         <div className="card mx-0" >
                             <Link to="/registration">
-                                <img className="card-img-top" src={card2} alt="Card image cap" />
+                                <img className="card-img-top" src={card2} alt="Card cap" />
                             </Link>
                             <div className="card-body">
                                 <h5 className="card-title">Eligibility Criteria</h5>
@@ -51,7 +51,7 @@ const DashboardComponent = () => {
                     <div className="col-md-6 col-sm-12 p-0">
                         <div className="card mx-0" >
                             <Link to="/registration">
-                                <img className="card-img-top" src={card3} alt="Card image cap" />
+                                <img className="card-img-top" src={card3} alt="Card cap" />
                             </Link>
                             <div className="card-body">
                                 <h5 className="card-title">Eligibility Criteria</h5>
@@ -64,7 +64,7 @@ const DashboardComponent = () => {
 
                         <div className="card mx-0" >
                             <Link to="/registration">
-                                <img className="card-img-top" src={card4} alt="Card image cap" />
+                                <img className="card-img-top" src={card4} alt="Card cap" />
                             </Link>
                             <div className="card-body">
                                 <h5 className="card-title">Eligibility Criteria</h5>
