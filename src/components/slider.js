@@ -4,7 +4,6 @@ import banner2 from '../imgs/banner2.jpg';
 import banner3 from '../imgs/banner3.jpg';
 
 
-
 const Slider = () => {
     return (
         <React.Fragment>

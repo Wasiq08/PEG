@@ -45,8 +45,8 @@ const DashboardComponent = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
+                
                 <div className="row">
                     <div className="col-md-6 col-sm-12 p-0">
                         <div className="card mx-0" >

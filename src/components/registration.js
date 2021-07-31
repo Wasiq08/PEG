@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { firebase } from '../config/initFirebase';
 import NavBar from './nav';
 import Header from './header';
 import Footer from './footer';
@@ -17,13 +18,21 @@ const RegistrationComponent = () => {
     }
 
     const handleSubmit = () => {
-        console.log(userDetails)
-        setUserDetails({})
-        toggleFormSubmission(true)
+        try {
+            console.log(userDetails);
+            const db = firebase.database().ref('/registrations');
+            const newRegistrationsRef = db.push();
+            newRegistrationsRef.set(userDetails);
+            toggleFormSubmission(true);
 
-        setTimeout(() => {
-            toggleFormSubmission(false)
-        }, 5000)
+            setTimeout(() => {
+                setUserDetails({});
+                toggleFormSubmission(false);
+            }, 3000)
+        } catch (error) {
+            console.log("error>>>>> ", error.message);
+            toggleFormSubmission(false);
+        }
     }
 
     return <div>
