@@ -20,6 +20,17 @@ code {
 
 .nav{
 color: white;
+height: 40px;
+align-items: center;
+}
+
+.nav p{
+  margin: 0;
+}
+.nav svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  vertical-align: sub;
 }
 
 .center{
@@ -28,6 +39,12 @@ color: white;
   /* border: 3px solid green; */
   padding: 10px;
   text-align: center;
+}
+
+.card-container{
+  width: 70%;
+  margin:auto;
+
 }
 
 .border2px{
@@ -47,4 +64,74 @@ margin: 10px;
 
 .color_red{
   color: red !important;
+}
+
+.form-container {
+  width: 94%;
+  margin: auto;
+  padding: 50px 40px;
+  border-radius: 80px;
+}
+
+.form-container input[type="text"], .form-container input[type="email"] {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  width: 90%;
+  padding: 10px 0;
+  margin-top: 20px;
+  outline: 0 !important;
+  box-shadow: none !important;
+  color: white;
+}
+
+.form-container input::-webkit-input-placeholder { /* Edge */
+  color: white;
+}
+
+.form-container input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+.form-container input::placeholder {
+  color: white;
+}
+
+.checbox-label {
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
+
+.checkboxes * {
+  font-size: 13px;
+}
+
+.submit-section {
+  width: 80%;
+  margin: auto;
+}
+
+.submit-section button {
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+  color: rgb(13, 63, 13);
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  margin: 65px auto 40px;
+  display: block;
+}
+
+@media (min-width : 740px){
+  
+  .card{
+  width: 18rem;
+  }
+
+  .form-container {
+    width: 780px;
+  }
+
 }

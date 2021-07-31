@@ -17,57 +17,71 @@ const DashboardComponent = () => {
         <div className="center">
             <Slider />
 
-            <div className="card" style={{ width: "18rem" }}>
-                <Link to="/registration">
-                    <img className="card-img-top" src={card1} alt="Card image cap" />
-                </Link>
-                <div className="card-body">
-                    <h5 className="card-title">Eligibility Criteria</h5>
-                    <p className="card-text color_red">Must have a PEC no* </p>
+            <div className="card-container">
+
+                <div className="row">
+                    <div className="col-md-6 col-sm-12 p-0">
+                        <div className="card mx-0" >
+                            <Link to="/registration">
+                                <img className="card-img-top" src={card1} alt="Card image cap" />
+                            </Link>
+                            <div className="card-body">
+                                <h5 className="card-title">Eligibility Criteria</h5>
+                                <p className="card-text color_red">Must have a PEC no* </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-md-6 col-sm-12 p-0">
+                        <div className="card mx-0" >
+                            <Link to="/registration">
+                                <img className="card-img-top" src={card2} alt="Card image cap" />
+                            </Link>
+                            <div className="card-body">
+                                <h5 className="card-title">Eligibility Criteria</h5>
+                                <p className="card-text color_red">Must have a PEC no*
+                                    Monthly Salary Must be less then 75k*
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className="row">
+                    <div className="col-md-6 col-sm-12 p-0">
+                        <div className="card mx-0" >
+                            <Link to="/registration">
+                                <img className="card-img-top" src={card3} alt="Card image cap" />
+                            </Link>
+                            <div className="card-body">
+                                <h5 className="card-title">Eligibility Criteria</h5>
+                                <p className="card-text color_red">Must have a PEC no*
+                                    Gender Must Be Female* </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-sm-12 p-0">
+
+                        <div className="card mx-0" >
+                            <Link to="/registration">
+                                <img className="card-img-top" src={card4} alt="Card image cap" />
+                            </Link>
+                            <div className="card-body">
+                                <h5 className="card-title">Eligibility Criteria</h5>
+                                <p className="card-text color_red">Must have a PEC no*
+                                    Must have at least 5 years authentic
+                                    work experience* </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div className="card" style={{ width: "18rem" }}>
-                <Link to="/registration">
-                    <img className="card-img-top" src={card2} alt="Card image cap" />
-                </Link>
-                <div className="card-body">
-                    <h5 className="card-title">Eligibility Criteria</h5>
-                    <p className="card-text color_red">Must have a PEC no*
-                        Monthly Salary Must be less then 75k*
-                    </p>
-                </div>
-            </div>
-
-            <div className="card" style={{ width: "18rem" }}>
-                <Link to="/registration">
-                    <img className="card-img-top" src={card3} alt="Card image cap" />
-                </Link>
-                <div className="card-body">
-                    <h5 className="card-title">Eligibility Criteria</h5>
-                    <p className="card-text color_red">Must have a PEC no*
-                        Gender Must Be Female* </p>
-                </div>
-            </div>
-
-            <div className="card" style={{ width: "18rem" }}>
-                <Link to="/registration">
-                    <img className="card-img-top" src={card4} alt="Card image cap" />
-                </Link>
-                <div className="card-body">
-                    <h5 className="card-title">Eligibility Criteria</h5>
-                    <p className="card-text color_red">Must have a PEC no*
-                        Must have at least 5 years authentic
-                        work experience* </p>
-                </div>
-            </div>
-
-        </div>
+        </div >
 
         {/* <!-- Footer --> */}
-        <Footer />
+        < Footer />
 
-    </div>
+    </div >
 }
 
 export default DashboardComponent;
