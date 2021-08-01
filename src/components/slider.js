@@ -1,5 +1,5 @@
 import React from "react";
-import banner1 from '../imgs/banner1.jpg';
+// import banner1 from '../imgs/banner1.jpg';
 import banner2 from '../imgs/banner2.jpg';
 import banner3 from '../imgs/banner3.jpg';
 
