@@ -3,11 +3,12 @@ import "firebase/database";
 
 
 const config = {
-    apiKey: "AIzaSyDF4fBXFymnuTTlK9zxtyI8elXdUHLJMQA",
-    authDomain: "application-19ca3.firebaseapp.com",
-    databaseURL: "https://application-19ca3-default-rtdb.firebaseio.com",
-    projectId: "application-19ca3",
+    apiKey: "AIzaSyB69mMXMZA2z7ABV1S-szBskr5KxrEZcqM",
+    authDomain: "pec-register.firebaseapp.com",
+    databaseURL: "https://pec-register-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "pec-register",
 }
+
 
 function initFirebase() {
     if (!firebase.apps.length) {

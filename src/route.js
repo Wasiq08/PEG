@@ -7,6 +7,7 @@ import {
 
 import DashboardComponent from './components/dashboard';
 import RegistrationComponent from './components/registration';
+import Submission from "./components/submission";
 
 export default function Routes() {
     return (
@@ -17,6 +18,9 @@ export default function Routes() {
                 <Switch>
                     <Route path="/registration">
                         <RegistrationComponent />
+                    </Route>
+                    <Route path="/submission">
+                        <Submission />
                     </Route>
                     <Route path="/">
                         <DashboardComponent />

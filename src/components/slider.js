@@ -7,7 +7,7 @@ import banner3 from '../imgs/banner3.jpg';
 const Slider = () => {
     return (
         <React.Fragment>
-            <div id="carouselExampleIndicators" className="border2px carousel slide" data-ride="carousel" style={{ width: "70%", margin: "auto" }}>
+            <div id="carouselExampleIndicators" className="border2px carousel slide" data-ride="carousel" style={{ width: "100%", margin: "auto" }}>
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

@@ -13,6 +13,47 @@ code {
 }
 
 /* navigation style */
+.icon{
+  margin: auto;
+  margin-left: 42%;
+}
+
+.db-video{
+  margin-left: 30%;
+  padding: 20px;
+}
+
+.db-banner{
+  margin: 20px;
+}
+.txt-effect{
+    text-align: center;
+    font-size: 3rem;
+}
+.th-message{
+  font-size: xxx-large;
+    color: darkgreen;
+    font-family: fantasy;
+    text-align: center;
+}
+.txt-message{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.profilepic
+{
+  border-radius: 50%;
+  width: 200px;
+  margin: 30px;
+}
+.typingeffect
+{
+  font-size: var(--typing-font);
+  margin-bottom: 30px;
+}
+
 
 .bg_green{
   background-color: rgb(13, 63, 13);

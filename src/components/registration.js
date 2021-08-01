@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { firebase } from '../config/initFirebase';
+import { useHistory } from "react-router-dom";
+
 import NavBar from './nav';
 import Header from './header';
 import Footer from './footer';
 
 
 const RegistrationComponent = () => {
-
+    
+    const history = useHistory();
     const [userDetails, setUserDetails] = useState({})
     const [isFormSubmitted, toggleFormSubmission] = useState(false)
 
@@ -17,13 +20,16 @@ const RegistrationComponent = () => {
         })
     }
 
-    const handleSubmit = () => {
+
+    const handleSubmit =  () => {
         try {
+            
             console.log(userDetails);
             const db = firebase.database().ref('/registrations');
             const newRegistrationsRef = db.push();
             newRegistrationsRef.set(userDetails);
-            toggleFormSubmission(true);
+            // toggleFormSubmission(true);
+            history.push('/submission');
 
             setTimeout(() => {
                 setUserDetails({});
@@ -46,38 +52,46 @@ const RegistrationComponent = () => {
         <div className="form-container bg_green color_white mt-5 mb-5">
             <div className="row m-0">
                 <div className="col-md-6 col-sm-12 p-0">
-                    <input type="text" onChange={handleInputChange} value={userDetails.firstname || ""} name="firstname" placeholder="First Name" />
+                    <input type="text" onChange={handleInputChange} value={userDetails.firstname || ""} name="firstname" placeholder="Name" />
                     <input type="text" onChange={handleInputChange} value={userDetails.cnicNo || ""} name="cnicNo" placeholder="CNIC No" />
+                    <input type="text" onChange={handleInputChange} value={userDetails.mobileNumber || ""} name="mobileNumber" placeholder="Mobile Number" />
                     <input type="text" onChange={handleInputChange} value={userDetails.pecNo || ""} name="pecNo" placeholder="PEC No" />
                     <input type="email" onChange={handleInputChange} value={userDetails.email || ""} name="email" placeholder="Email" />
-                    <input type="text" onChange={handleInputChange} value={userDetails.presentAddress || ""} name="presentAddress" placeholder="Present Address" />
+                    <input type="text" onChange={handleInputChange} value={userDetails.address || ""} name="address" placeholder="Address" />
+                    <input type="text" onChange={handleInputChange} value={userDetails.city || ""} name="city" placeholder="City" />
                     <input type="text" onChange={handleInputChange} value={userDetails.province || ""} name="province" placeholder="Province" />
                 </div>
                 <div className="col-md-6 col-sm-12 p-0">
-                    <p className="checbox-label mt-4">Do you own property on your name</p>
+                    <p className="checbox-label mt-4">Do you have a job ?</p>
                     <div className="checkboxes">
-                        <input type="radio" name="ownProperty" onChange={handleInputChange} checked={userDetails.ownProperty === "Yes"} value={"Yes"} className="mr-1" /><label> Yes</label>
-                        <input type="radio" name="ownProperty" onChange={handleInputChange} checked={userDetails.ownProperty === "No"} value={"No"} className="ml-3 mr-1" /><label> No</label>
+                        <input type="radio" name="ownJob" onChange={handleInputChange} checked={userDetails.ownJob === "Yes"} value={"Yes"} className="mr-1" /><label> Yes</label>
+                        <input type="radio" name="ownJob" onChange={handleInputChange} checked={userDetails.ownJob === "No"} value={"No"} className="ml-3 mr-1" /><label> No</label>
                     </div>
-                    <p className="checbox-label">Do you live in rental house?</p>
+                    <p className="checbox-label">What is your current role ?</p>
                     <div className="checkboxes">
-                        <input type="radio" name="rentalHouse" onChange={handleInputChange} checked={userDetails.rentalHouse === "Yes"} value={"Yes"} className="mr-1" /><label> Yes</label>
-                        <input type="radio" name="rentalHouse" onChange={handleInputChange} checked={userDetails.rentalHouse === "No"} value={"No"} className="ml-3 mr-1" /><label> No</label>
+                        <input type="radio" name="currentRole" onChange={handleInputChange} checked={userDetails.currentRole === "fresh"} value={"fresh"} className="mr-1" /><label>Fresh</label>
+                        <input type="radio" name="currentRole" onChange={handleInputChange} checked={userDetails.currentRole === "experience"} value={"experience"} className="ml-3 mr-1" /><label>Experienced</label>
+                        <input type="radio" name="currentRole" onChange={handleInputChange} checked={userDetails.currentRole === "jobless"} value={"jobless"} className="mr-1" /><label>Jobless</label>
+                        <input type="radio" name="currentRole" onChange={handleInputChange} checked={userDetails.currentRole === "job"} value={"job"} className="ml-3 mr-1" /><label>Job</label>
                     </div>
-                    <p className="checbox-label">Are you agreed to use plot for residential purpose?</p>
+
+                    {/* <p className="checbox-label">Are you agreed to use plot for residential purpose?</p>
                     <div className="checkboxes">
                         <input type="radio" name="residential" onChange={handleInputChange} checked={userDetails.residential === "Yes"} value={"Yes"} className="mr-1" /><label> Yes</label>
                         <input type="radio" name="residential" onChange={handleInputChange} checked={userDetails.residential === "No"} value={"No"} className="ml-3 mr-1" /><label> No</label>
-                    </div>
-                    <p className="checbox-label">Do you own property on your name</p>
+                    </div> */}
+                    
+                    {/* <p className="checbox-label">Do you own property on your name</p>
                     <div className="checkboxes">
                         <input type="radio" name="ownProperty2" onChange={handleInputChange} checked={userDetails.ownProperty2 === "Yes"} value={"Yes"} className="mr-1" /><label> Yes</label>
                         <input type="radio" name="ownProperty2" onChange={handleInputChange} checked={userDetails.ownProperty2 === "No"} value={"No"} className="ml-3 mr-1" /><label> No</label>
-                    </div>
-                    <p className="checbox-label">Are you registered in FBR as Filer?</p>
+                    </div> */}
+                    
+                    <p className="checbox-label">Are you registered in PEC as ?</p>
                     <div className="checkboxes">
-                        <input type="radio" name="fbrFiler" onChange={handleInputChange} checked={userDetails.fbrFiler === "Yes"} value={"Yes"} className="mr-1" /><label> Yes</label>
-                        <input type="radio" name="fbrFiler" onChange={handleInputChange} checked={userDetails.fbrFiler === "No"} value={"No"} className="ml-3 mr-1" /><label> No</label>
+                        <input type="radio" name="registerdPec" onChange={handleInputChange} checked={userDetails.registerdPec === "register-engineer"} value={"register-engineer"} className="mr-1" /><label>Register Engineer</label>
+                        <input type="radio" name="registerdPec" onChange={handleInputChange} checked={userDetails.registerdPec === "professional-engineer"} value={"professional-engineer"} className="ml-3 mr-1" /><label>Professional Engineer</label>
+                        <input type="radio" name="registerdPec" onChange={handleInputChange} checked={userDetails.registerdPec === "not-yet"} value={"not-yet"} className="ml-3 mr-1" /><label>None</label>
                     </div>
                 </div>
                 <div className="submit-section mt-5">

@@ -3,76 +3,39 @@ import NavBar from './nav';
 import Slider from './slider';
 import Header from './header';
 import Footer from './footer';
-// import card1 from '../imgs/card1.PNG';
-// import card2 from '../imgs/card2.PNG';
-import card3 from '../imgs/card3.PNG';
-import card4 from '../imgs/card4.PNG';
 import { Link } from "react-router-dom";
+import banner from '../imgs/pec_banner.jpg';
+import ReactPlayer from 'react-player'
 
 const DashboardComponent = () => {
     return <div>
         <NavBar />
         <Header />
-
-        <div className="center">
+        <div>
             <Slider />
-
             <div className="card-container">
-
-                <div className="row">
-                    {/* <div className="col-md-6 col-sm-12 p-0">
-                        <div className="card mx-0" >
-                            <Link to="/registration">
-                                <img className="card-img-top" src={card1} alt="Card cap" />
-                            </Link>
-                            <div className="card-body">
-                                <h5 className="card-title">Eligibility Criteria</h5>
-                                <p className="card-text color_red">Must have a PEC no* </p>
-                            </div>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="col-md-6 col-sm-12 p-0">
-                        <div className="card mx-0" >
-                            <Link to="/registration">
-                                <img className="card-img-top" src={card2} alt="Card cap" />
-                            </Link>
-                            <div className="card-body">
-                                <h5 className="card-title">Eligibility Criteria</h5>
-                                <p className="card-text color_red">Must have a PEC no*
-                                    Monthly Salary Must be less then 75k*
-                                </p>
-                            </div>
-                        </div>
-                    </div> */}
+                <div className="db-banner">
+                    <img className="card-img-top" src={banner} alt="Card cap" />
                 </div>
-                
-                <div className="row">
-                    <div className="col-md-6 col-sm-12 p-0">
-                        <div className="card mx-0" >
-                            <Link to="/registration">
-                                <img className="card-img-top" src={card3} alt="Card cap" />
-                            </Link>
-                            <div className="card-body">
-                                <h5 className="card-title">Eligibility Criteria</h5>
-                                <p className="card-text color_red">Must have a PEC no*
-                                    Gender Must Be Female* </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-sm-12 p-0">
 
-                        <div className="card mx-0" >
-                            <Link to="/registration">
-                                <img className="card-img-top" src={card4} alt="Card cap" />
-                            </Link>
-                            <div className="card-body">
-                                <h5 className="card-title">Eligibility Criteria</h5>
-                                <p className="card-text color_red">Must have a PEC no*
-                                    Must have at least 5 years authentic
-                                    work experience* </p>
-                            </div>
-                        </div>
+
+                <div className="card mx-0" >
+                    <Link to="/registration">
+                        <button>Apply Now</button>
+                        {/* <img className="card-img-top" src={card1} alt="Card cap" /> */}
+                    </Link>
+                </div>
+
+                <div className="row db-video">
+
+                    <div className='player-wrapper'>
+                        <ReactPlayer
+                            url='https://fb.watch/76oKeAuGmb/'
+                            className='react-player'
+                            playing
+                            width='100%'
+                            height='100%'
+                        />
                     </div>
                 </div>
             </div>
