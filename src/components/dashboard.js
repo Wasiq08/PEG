@@ -20,7 +20,7 @@ const DashboardComponent = () => {
             <div className="card-container">
 
                 <div className="row">
-                    <div className="col-md-6 col-sm-12 p-0">
+                    {/* <div className="col-md-6 col-sm-12 p-0">
                         <div className="card mx-0" >
                             <Link to="/registration">
                                 <img className="card-img-top" src={card1} alt="Card cap" />
@@ -30,9 +30,9 @@ const DashboardComponent = () => {
                                 <p className="card-text color_red">Must have a PEC no* </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="col-md-6 col-sm-12 p-0">
+                    {/* <div className="col-md-6 col-sm-12 p-0">
                         <div className="card mx-0" >
                             <Link to="/registration">
                                 <img className="card-img-top" src={card2} alt="Card cap" />
@@ -44,7 +44,7 @@ const DashboardComponent = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 
                 <div className="row">
